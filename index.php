@@ -20,7 +20,7 @@ class record {
         $record['hash'] = $hash;
         return $record;
     }
-
+//To verify the blocks
     public function verify_block($data) {
         $record = ['date' => $data['date'], 'hid' => $data['hid'], 'data' => $data['data'], 'previous_hash' => $data['previous_hash']];
         $hash = hash('sha256', serialize($record));
